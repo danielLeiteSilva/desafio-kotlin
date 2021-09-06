@@ -1,3 +1,3 @@
 package Model
 
-abstract class Professor(nome:String, sobrenome: String, tempoCasa: Int, codigo: Int)
+abstract class Professor(var nome:String, var sobrenome: String, var tempoCasa: Int, var codigo: Int)
