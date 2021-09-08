@@ -20,6 +20,6 @@ abstract class Curso(
     // ver uma forma de excluir um aluno
     // Ver na parte F como adiconar matricula com data no construtor
     fun excluirAluno(aluno: Aluno){
-
+        listaDeAlunos.remove(aluno)
     }
 }
