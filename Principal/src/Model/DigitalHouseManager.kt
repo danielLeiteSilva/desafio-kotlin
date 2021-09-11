@@ -1,12 +1,12 @@
 package Model
-
+//Classe responsável por gerenciar o serviço
 class DigitalHouseManager(
     var listaDeAlunos: MutableSet<Aluno>,
     var listaDeProfessores: MutableSet<Professor>,
     var listaDeCursos: MutableSet<Curso>,
     var listaDeMatricula: MutableSet<Matricula>){
 
-    //Funcionou
+
     fun registrarCurso(nomeCurso: String, codigoCurso: Int, quantidadeMaximaAlunos: Int){
         try {
             listaDeCursos.add(Curso(nomeCurso, codigoCurso, quantidadeMaximaAlunos))
@@ -16,7 +16,7 @@ class DigitalHouseManager(
         }
     }
 
-    //Funcionou
+
     fun excluirCurso(codigoCurso: Int){
         try {
             listaDeCursos.forEach{ curso ->
@@ -30,7 +30,7 @@ class DigitalHouseManager(
 
     }
 
-    //Funcionou
+
     fun registrarProfessorAdjunto(nome: String, sobrenome: String, codigoProfessor: Int, quantidadeDeHoras: Int){
         try {
             val tempoDeCasaAdjunto = 0
@@ -41,7 +41,8 @@ class DigitalHouseManager(
         }
 
     }
-    //Funcionou
+
+
     fun registrarProfessorTitular(nome: String, sobrenome: String, codigoProfessor: Int, especialidade: String){
         try {
             val tempoDeCasaTitular = 0
@@ -52,7 +53,7 @@ class DigitalHouseManager(
         }
 
     }
-    //Testar
+
     fun excluirProfessor(codigoProfessor: Int){
         try {
             var professor: Professor? = listaDeProfessores.find {
@@ -66,7 +67,6 @@ class DigitalHouseManager(
         }
     }
 
-    //Funcionou
     fun registrarAluno(nome: String, sobrenome: String, codigoDoAluno: Int){
         try {
             listaDeAlunos.add(Aluno(nome, sobrenome, codigoDoAluno))
@@ -75,7 +75,7 @@ class DigitalHouseManager(
             println("Não foi possível registrar um aluno $error")
         }
     }
-    //Analisar
+
     fun matricularAluno(codigoAluno: Int, codigoCurso: Int) {
         try {
             var cursoMatricula: Curso? = listaDeCursos.find {
